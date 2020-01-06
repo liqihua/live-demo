@@ -1,0 +1,75 @@
+2020-01-06 11:14:28.757 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 11:14:28.757 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 11:14:28.772 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 11:16:00.092 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 11:16:00.096 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 11:16:00.101 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 11:17:20.133 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 11:17:20.148 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 11:17:20.148 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 11:17:34.169 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 11:17:34.169 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 11:17:34.169 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 11:17:48.569 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 11:17:48.569 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 11:17:48.569 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 11:31:27.240 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 11:31:27.240 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 11:31:27.256 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 11:33:04.224 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 11:33:04.239 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 11:33:04.239 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 15:40:05.451 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 15:40:05.457 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 15:40:05.464 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 15:40:56.682 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 15:40:56.687 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 15:40:56.694 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 16:11:12.055 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 16:11:12.058 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 16:11:12.062 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 17:19:20.779 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 17:19:20.784 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 17:19:20.790 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 17:20:15.470 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 17:20:15.473 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 17:20:15.478 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 17:25:10.263 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 17:25:10.267 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 17:25:10.271 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 17:27:53.416 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 17:27:53.419 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 17:27:53.423 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 17:30:14.608 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 17:30:14.611 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 17:30:14.615 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 18:23:46.510 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 18:23:46.513 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 18:23:46.517 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:24:40.804 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 19:24:40.808 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:24:40.812 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:26:34.031 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 19:26:34.037 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:26:34.045 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:28:10.580 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 19:28:10.584 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:28:10.588 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:31:32.793 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 19:31:32.797 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:31:32.800 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:32:35.345 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 19:32:35.349 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:32:35.353 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:56:07.922 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 19:56:07.930 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:56:07.940 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:59:13.936 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 19:59:13.945 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 19:59:13.953 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 20:00:06.550 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 20:00:06.554 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 20:00:06.558 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 20:05:16.439 |-WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration -| No spring.application.name found, defaulting to 'application'
+2020-01-06 20:05:16.447 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.
+2020-01-06 20:05:16.456 |-WARN  com.netflix.config.sources.URLConfigurationSource -| No URLs will be polled as dynamic configuration sources.

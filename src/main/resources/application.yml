@@ -1,0 +1,7 @@
+server:
+  port: 9001
+
+
+vcloud:
+  appKey: be48130ffb7fbf1cb2e26ecb4d80da75
+  appSecret: 2c8e0f0e80eb
