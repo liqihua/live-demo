@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/sdk/common.css" />
+    <script src="/jquery/jquery-1.8.3.min.js"></script>
+    <script src="/sdk/materialize.min.js"></script>
+    <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.0.0.js"></script>
+    <style>
+        #video{width: 600px;height: 500px;}
+        #video div {height: 100%}
+    </style>
+</head>
+<body>
+<div id="video"></div>
+<script>
+    // rtc object
+    var rtc = {
+        client: null,
+        joined: false,
+        published: false,
+        localStream: null,
+        remoteStreams: [],
+        params: {}
+    };
+
+    // Options for joining a channel
+    var option = {
+        appID: "72cab20262db446d9e6f31b20cd4d495",
+        channel: "channel1",
+        uid: null,
+        token: "00672cab20262db446d9e6f31b20cd4d495IAAirW1BR4VemuXwGBJKlOND9FiAUuYEO5gVv9G4qe2/9QrCxmsAAAAAEAASzUAi4HYUXgEAAQDedhRe"
+    }
+    $(document).ready(function () {
+        console.log("init ...")
+        // Create a client
+        rtc.client = AgoraRTC.createClient({mode: "live", codec: "h264"});
+
+        // Initialize the client
+        rtc.client.init(option.appID, function () {
+            console.log("init success");
+            // The value of role can be "host" or "audience".
+            rtc.client.setClientRole("host");
+            // 加入频道
+            rtc.client.join(option.token ? option.token : null, option.channel, option.uid ? +option.uid : null, function (uid) {
+                console.log("join channel: " + option.channel + " success, uid: " + uid);
+                rtc.params.uid = uid;
+
+
+                rtc.client.on("stream-added", function (evt) {
+                    var remoteStream = evt.stream;
+                    var id = remoteStream.getId();
+                    if (id !== rtc.params.uid) {
+                        rtc.client.subscribe(remoteStream, function (err) {
+                            console.log("stream subscribe failed", err);
+                        })
+                    }
+                    console.log('stream-added remote-uid: ', id);
+
+                });
+
+                rtc.client.on("stream-subscribed", function (evt) {
+                    var remoteStream = evt.stream;
+                    var id = remoteStream.getId();
+                    // Add a view for the remote stream.
+                    addView(id);
+                    // Play the remote stream.
+                    remoteStream.play("remote_video_" + id);
+                    console.log('stream-subscribed remote-uid: ', id);
+                })
+            }, function(err) {
+                console.error("client join failed", err)
+            })
+        }, (err) => {
+            console.error(err);
+        });
+    })
+
+    function addView (id, show) {
+        if (!$("#" + id)[0]) {
+            $("<div/>", {
+                id: "remote_video_panel_" + id,
+                class: "video-view",
+            }).appendTo("#video");
+            $("<div/>", {
+                id: "remote_video_" + id,
+                class: "video-placeholder",
+            }).appendTo("#remote_video_panel_" + id);
+            $("<div/>", {
+                id: "remote_video_info_" + id,
+                class: "video-profile " + (show ? "" :  "hide"),
+            }).appendTo("#remote_video_panel_" + id);
+            $("<div/>", {
+                id: "video_autoplay_"+ id,
+                class: "autoplay-fallback hide",
+            }).appendTo("#remote_video_panel_" + id);
+        }
+    }
+</script>
+</body>
+</html>

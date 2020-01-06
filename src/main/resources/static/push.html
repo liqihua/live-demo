@@ -54,10 +54,10 @@
                     rtc.localStream.init(function () {
                         console.log("init local stream success");
                         // Publish the local stream
-                        /*rtc.client.publish(rtc.localStream, function (err) {
+                        rtc.client.publish(rtc.localStream, function (err) {
                             console.log("publish failed");
                             console.error(err);
-                        })*/
+                        })
                     }, function (err) {
                         console.error("init local stream failed ", err);
                     })
