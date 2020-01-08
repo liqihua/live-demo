@@ -2,101 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="/sdk/common.css" />
+    <link href="/sdk/neplayer.min.css" rel="stylesheet">
     <script src="/jquery/jquery-1.8.3.min.js"></script>
-    <script src="/sdk/materialize.min.js"></script>
-    <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.0.0.js"></script>
+    <script src="/sdk/neplayer.min.js"></script>
     <style>
-        #video{width: 600px;height: 500px;}
-        #video div {height: 100%}
+        #video-wrap {
+            width: 900px;
+            height: 600px;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
-<div id="video"></div>
-<script>
-    // rtc object
-    var rtc = {
-        client: null,
-        joined: false,
-        published: false,
-        localStream: null,
-        remoteStreams: [],
-        params: {}
-    };
 
-    // Options for joining a channel
-    var option = {
-        appID: "72cab20262db446d9e6f31b20cd4d495",
-        channel: "channel1",
-        uid: null,
-        token: "00672cab20262db446d9e6f31b20cd4d495IAAirW1BR4VemuXwGBJKlOND9FiAUuYEO5gVv9G4qe2/9QrCxmsAAAAAEAASzUAi4HYUXgEAAQDedhRe"
-    }
-    $(document).ready(function () {
-        console.log("init ...")
-        // Create a client
-        rtc.client = AgoraRTC.createClient({mode: "live", codec: "h264"});
+    <div id="video-wrap">
+        <video id="my-video" class="video-js" x-webkit-airplay="allow" webkit-playsinline controls poster="poster.png" preload="auto" width="800px" height="400px" data-setup="{}">
+            <source src="http://flv0c8a7d4d.live.126.net/live/26a85bc911914c80aa747a62cb2f44ea.flv?netease=flv0c8a7d4d.live.126.net" type="video/mp4">
+        </video>
+    </div>
 
-        // Initialize the client
-        rtc.client.init(option.appID, function () {
-            console.log("init success");
-            // The value of role can be "host" or "audience".
-            rtc.client.setClientRole("host");
-            // 加入频道
-            rtc.client.join(option.token ? option.token : null, option.channel, option.uid ? +option.uid : null, function (uid) {
-                console.log("join channel: " + option.channel + " success, uid: " + uid);
-                rtc.params.uid = uid;
+    <script>
+        var config = {
+            "controls": true, //是否显示控制条
+            "autoplay": true, //是否自动播放(ios不支持自动播放)
 
+            /*预加载选项*/
+            "preload": "auto", //
+            /*
+            'auto'预加载视频（需要浏览器允许）;
+            'metadata'仅预加载视频meta信息;
+            'none'不预加载;
+            */
 
-                rtc.client.on("stream-added", function (evt) {
-                    var remoteStream = evt.stream;
-                    var id = remoteStream.getId();
-                    if (id !== rtc.params.uid) {
-                        rtc.client.subscribe(remoteStream, function (err) {
-                            console.log("stream subscribe failed", err);
-                        })
-                    }
-                    console.log('stream-added remote-uid: ', id);
-
-                });
-
-                rtc.client.on("stream-subscribed", function (evt) {
-                    var remoteStream = evt.stream;
-                    var id = remoteStream.getId();
-                    // Add a view for the remote stream.
-                    addView(id);
-                    // Play the remote stream.
-                    remoteStream.play("remote_video_" + id);
-                    console.log('stream-subscribed remote-uid: ', id);
-                })
-            }, function(err) {
-                console.error("client join failed", err)
-            })
-        }, (err) => {
-            console.error(err);
-        });
-    })
-
-    function addView (id, show) {
-        if (!$("#" + id)[0]) {
-            $("<div/>", {
-                id: "remote_video_panel_" + id,
-                class: "video-view",
-            }).appendTo("#video");
-            $("<div/>", {
-                id: "remote_video_" + id,
-                class: "video-placeholder",
-            }).appendTo("#remote_video_panel_" + id);
-            $("<div/>", {
-                id: "remote_video_info_" + id,
-                class: "video-profile " + (show ? "" :  "hide"),
-            }).appendTo("#remote_video_panel_" + id);
-            $("<div/>", {
-                id: "video_autoplay_"+ id,
-                class: "autoplay-fallback hide",
-            }).appendTo("#remote_video_panel_" + id);
+            "poster": "myPoster.jpg", //视频播放前显示的图片
+            "loop": true, //是否循环播放
+            "width": "800px", //设置播放器宽度
+            "height": "400px", //设置播放器高度
+            "techOrder": ["flash", "html5"], //优先使用的播放模式
+            "streamTimeoutTime": 30 * 1000, //拉流超时时间，默认30s
+            /*设置播放器控件*/
+            controlBar: {
+                playToggle: false
+            }
+            /*
+            //设置不显示大播放按钮
+            bigPlayButton:false,
+             */
+            /*默认播放器控件列表
+            posterImage
+            textTrackDisplay
+            loadingSpinner
+            bigPlayButton
+            controlBar
+                playToggle
+                volumeMenuButton
+                currentTimeDisplay
+                timeDivider
+                durationDisplay
+                progressControl
+                    seekBar
+                        loadProgressBar
+                        mouseTimeDisplay
+                        playProgressBar
+                liveDisplay
+                remainingTimeDisplay
+                customControlSpacer
+                playbackRateMenuButton
+                chaptersButton
+                descriptionsButton
+                subtitlesButton
+                captionsButton
+                audioTrackButton
+                fullscreenToggle
+            */
         }
-    }
-</script>
+        var myPlayer = neplayer("my-video", config, function(){
+            // 当播放器初始化完成时运行的回调函数
+            console.log(myPlayer);
+            console.log('init success ...')
+        });
+        myPlayer.play()
+        console.log('myPlayer.play() ...')
+
+    </script>
 </body>
 </html>
